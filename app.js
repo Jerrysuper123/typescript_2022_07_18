@@ -1,15 +1,19 @@
-function combine(input1, input2) {
-    //ts does not know if you want to combine string or numbers, so be specific
-    var result;
-    if (typeof input1 === "number" && typeof input2 === "number") {
-        result = input1 + input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
+//unknown type is better than any type
+//because you cannot assign unknown type to a fixed type, you can to use a if check statement
+var variable;
+var text;
+variable = 3;
+variable = "string";
+//add extra line to avoid error: cannot assign unknown type to a fixed type
+if (typeof variable === "string") {
+    text = variable;
 }
-var combineAges = combine(3, 4);
-console.log(combineAges);
-var combinedNames = combine("tom", "alex");
-console.log(combinedNames);
+//never return type - f that never return
+function generateError(message, code) {
+    //throw will crash your script
+    throw {
+        message: message,
+        code: code
+    };
+}
+generateError("An error occur!", 500);
