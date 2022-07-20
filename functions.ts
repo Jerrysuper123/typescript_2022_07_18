@@ -29,7 +29,7 @@ console.log(combineValues(2, 3))
 
 function addAndCall(n1: number, n2: number, cb: (number) => void) {
     //above is set to be void, does not mean below we cannot return
-    //it means that we are not using the returned value to do anything in this function
+    //it means that we are not using the returned value to do anything in this function 
     const result = n1 + n2;
     cb(result);
 }
