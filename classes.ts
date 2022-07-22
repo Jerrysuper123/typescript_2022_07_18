@@ -102,8 +102,12 @@ class AccountingDepartment extends Department {
     }
 }
 
+//use class to access class level method, then construct privately within class
 const accounting = AccountingDepartment.getInstance();
-console.log(accounting)
+console.log(accounting);
+
+
+
 //calling setter function without ()
 accounting.mostRecentReport = "salary wrong...";
 accounting.addReport("bonus wrong...")
