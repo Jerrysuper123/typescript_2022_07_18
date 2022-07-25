@@ -22,6 +22,7 @@ const e1: ElevatedEmployee = {
 type Combinable = string | number;
 type Numeric = number | boolean;
 type Universal = Combinable & Numeric;
+// const variableUn: Universal = false;
 
 
 //similar to Java constructor overload, we can overload our functions in ts as well
